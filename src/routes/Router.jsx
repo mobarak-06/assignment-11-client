@@ -7,12 +7,14 @@ import AllBlogs from "../pages/AllBlogs";
 import FeatureBlog from "../pages/FeatureBlog";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Wishlist from "../pages/Wishlist";
+import ErrorPage from "../pages/ErrorPage";
 
  const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -29,6 +31,10 @@ import Register from "../pages/Register";
         {
           path: "/featuredBlog",
           element: <FeatureBlog/>,
+        },
+        {
+          path: "/wishlist",
+          element: <Wishlist/>,
         },
         {
           path: "/login",

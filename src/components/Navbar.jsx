@@ -1,22 +1,71 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 
 const Navbar = () => {
+  const { logOut, user } = useAuth();
+  console.log(user);
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        console.log("log out");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const links = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-[#fb2056] font-bold" : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/addBlog">Add Blog</Link>
+        <NavLink
+          to="/addBlog"
+          className={({ isActive }) =>
+            isActive ? "text-[#fb2056] font-bold" : ""
+          }
+        >
+          Add Blog
+        </NavLink>
       </li>
       <li>
-        <Link to="/allBlogs">All blogs</Link>
+        <NavLink
+          to="/allBlogs"
+          className={({ isActive }) =>
+            isActive ? "text-[#fb2056] font-bold" : ""
+          }
+        >
+          All blogs
+        </NavLink>
       </li>
       <li>
-        <Link to="/featuredBlog">Featured Blogs</Link>
+        <NavLink
+          to="/featuredBlog"
+          className={({ isActive }) =>
+            isActive ? "text-[#fb2056] font-bold" : ""
+          }
+        >
+          Featured Blogs
+        </NavLink>
       </li>
       <li>
-        <Link>Wishlist</Link>
+        <NavLink
+          to="/wishlist"
+          className={({ isActive }) =>
+            isActive ? "text-[#fb2056] font-bold" : ""
+          }
+        >
+          Wishlist
+        </NavLink>
       </li>
     </>
   );
@@ -62,7 +111,40 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to='/login' className="btn bg-[#fb2056] border-[#fb2056] text-white">Login</Link>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user.photoURL}
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a className="font-bold text-base">{user.displayName}</a>
+                </li>
+                <li>
+                  <a onClick={() => handleSignOut()} className="text-red-500 font-bold">Logout</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="btn bg-[#fb2056] border-[#fb2056] text-white"
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
