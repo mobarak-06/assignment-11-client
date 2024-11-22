@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "title": "Exploring the Hidden Gems of Bali",
+      "image": "https://i.ibb.co.com/Y33bwnz/tree-house-diamond-beach-nusa-penida-island-bali-indonesia-min.jpg",
+      "shortDescription": "Discover the less-traveled paths and serene landscapes of Bali.",
+      "category": "Adventure",
+      "detailsButton": "https://example.com/blog/bali-hidden-gems",
+      "wishlistButton": true
+    },
+    {
+      "id": 2,
+      "title": "Ancient Wonders of Egypt",
+      "image": "https://i.ibb.co.com/jgphVtN/young-man-walking-towards-great-sphinx-giza-min.jpg",
+      "shortDescription": "Dive into the history and mystery of ancient Egypt with a visit to its iconic sites.",
+      "category": "History",
+      "detailsButton": "View Details",
+      "wishlistButton": true
+    },
+    {
+      "id": 3,
+      "title": "Top 10 Beaches in the Caribbean",
+      "image": "https://i.ibb.co.com/ChBfPHT/beach-surrounded-by-sea-greenery-sunlight-blue-sky-praslin-seychelles-min-1.jpg",
+      "shortDescription": "Plan your tropical getaway with our guide to the Caribbean's best beaches.",
+      "category": "Beach",
+      "detailsButton": "https://example.com/blog/caribbean-beaches",
+      "wishlistButton": false
+    },
+    {
+      "id": 4,
+      "title": "Hiking in the Swiss Alps",
+      "image": "https://i.ibb.co.com/S7Ww3HB/man-with-tourist-rucksack-stands-before-gorgeous-view-norway-mountains-min.jpg",
+      "shortDescription": "A guide to hiking trails and breathtaking views in the Swiss Alps.",
+      "category": "Adventure",
+      "detailsButton": "https://example.com/blog/swiss-alps",
+      "wishlistButton": true
+    },
+    {
+      "id": 5,
+      "title": "Japan’s Cherry Blossom Season: What You Need to Know",
+      "image": "https://i.ibb.co.com/2dpZgPF/blooming-almond-tree-with-pink-flowers-near-path-park-min.jpg",
+      "shortDescription": "Learn about the best times and places to view cherry blossoms in Japan.",
+      "category": "Nature",
+      "detailsButton": "https://example.com/blog/japan-cherry-blossoms",
+      "wishlistButton": false
+    },
+    {
+      "id": 6,
+      "title": "Exploring the Streets of Paris",
+      "image": "https://i.ibb.co.com/800qy45/arc-de-triomphe-street-view-paris-min.jpg",
+      "shortDescription": "Discover Paris beyond the Eiffel Tower, from quaint cafes to hidden spots.",
+      "category": "Culture",
+      "detailsButton": "https://example.com/blog/paris-streets",
+      "wishlistButton": true
+    }
+  ]
