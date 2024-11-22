@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../Hooks/useAuth";
-import toast from "react-hot-toast";
 import { useState } from "react";
 import { IoMdEye ,IoMdEyeOff } from "react-icons/io";
+import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showEye, setShowEye] = useState(false);

@@ -1,17 +1,17 @@
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import useAuth from "../../Hooks/useAuth";
-import { IoMdEye ,IoMdEyeOff } from "react-icons/io";
-import { useContext, useState } from "react";
-import { AuthContext } from "../providers/AuthProvider";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { useState } from "react";
+import useAuth from "../Hooks/useAuth";
 
 const Login = () => {
   const [showEye, setShowEye] = useState(false);
-  const [loginError, setLoginError] = useState('');
+  const [loginError, setLoginError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
-  const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
+  const { signIn, signInWithGoogle, signInWithGithub } = useAuth();
   const {
     register,
     handleSubmit,
@@ -25,7 +25,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        navigate(location?.state ? location.state : "/")
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -37,31 +37,31 @@ const Login = () => {
 
   const handleSignInWithGoogle = () => {
     signInWithGoogle()
-    .then(result => {
-      console.log(result.user);
-      navigate(location?.state ? location.state : "/")
-    })
-    .catch(error => {
-      console.error(error.message);
-      
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
 
   const handleSignInWithGithub = () => {
     signInWithGithub()
-    .then(result => {
-      console.log(result.user);
-      navigate(location?.state ? location.state : "/")
-    })
-    .catch(error => {
-      console.error(error.message);
-      
-    })
-  }
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
   return (
     <main className="mx-auto flex min-h-screen w-full items-center justify-center dark:bg-gray-900 text-black">
       <section className="flex w-[30rem] flex-col space-y-10">
-        <div className="text-center text-4xl font-medium text-gray-400">Log In</div>
+        <div className="text-center text-4xl font-medium text-gray-400">
+          Log In
+        </div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="w-full transform border-gray-400 border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500 mb-5">
             <input
@@ -72,23 +72,32 @@ const Login = () => {
             />
           </div>
           {errors.email && (
-              <span className="text-red-500">This field is required</span>
-            )}
+            <span className="text-red-500">This field is required</span>
+          )}
           <div className="w-full transform border-gray-400 border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500 mb-5 relative">
             <input
               type={showEye ? "text" : "password"}
               placeholder="Password"
-              {...register("password", { required: true }, { pattern: /^[A-Za-z]+$/i })}
+              {...register(
+                "password",
+                { required: true },
+                { pattern: /^[A-Za-z]+$/i }
+              )}
               className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
             />
-            <span className="absolute right-4" onClick={() => setShowEye(!showEye)}>{showEye ? <IoMdEyeOff size={20}/> : <IoMdEye size={20}/>}</span>
+            <span
+              className="absolute right-4"
+              onClick={() => setShowEye(!showEye)}
+            >
+              {showEye ? <IoMdEyeOff size={20} /> : <IoMdEye size={20} />}
+            </span>
           </div>
           {errors.password && (
-              <span className="text-red-500">This field is required</span>
-            )}
-            {
-              loginError && <p className="text-red-500 font-bold">Some Thing Wrong !</p>
-            }
+            <span className="text-red-500">This field is required</span>
+          )}
+          {loginError && (
+            <p className="text-red-500 font-bold">Some Thing Wrong !</p>
+          )}
           <div className="flex items-center justify-center">
             <button className="transform rounded-md  bg-indigo-600 py-2 font-bold duration-300  text-white hover:bg-indigo-400 p-4 w-full btn">
               LOG IN
@@ -113,7 +122,7 @@ const Login = () => {
         <h2 className="divider text-gray-600">Or Continue With</h2>
         <div className="btn-wrapper text-center flex justify-between">
           <button
-          onClick={handleSignInWithGithub}
+            onClick={handleSignInWithGithub}
             className="text-black bg-white active:bg-blueGray-50 text-blueGray-700  px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150 btn w-1/2"
             type="button"
           >
@@ -125,7 +134,7 @@ const Login = () => {
             Github{" "}
           </button>
           <button
-          onClick={handleSignInWithGoogle}
+            onClick={handleSignInWithGoogle}
             className="text-black bg-white active:bg-blueGray-50 text-blueGray-700  px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150 btn w-1/2 "
             type="button"
           >
