@@ -1,56 +1,56 @@
 [
-    {
-      "id": 1,
-      "title": "Exploring the Hidden Gems of Bali",
-      "image": "https://i.ibb.co.com/Y33bwnz/tree-house-diamond-beach-nusa-penida-island-bali-indonesia-min.jpg",
-      "shortDescription": "Discover the less-traveled paths and serene landscapes of Bali.",
-      "category": "Adventure",
-      "detailsButton": "https://example.com/blog/bali-hidden-gems",
-      "wishlistButton": true
-    },
-    {
-      "id": 2,
-      "title": "Ancient Wonders of Egypt",
-      "image": "https://i.ibb.co.com/jgphVtN/young-man-walking-towards-great-sphinx-giza-min.jpg",
-      "shortDescription": "Dive into the history and mystery of ancient Egypt with a visit to its iconic sites.",
-      "category": "History",
-      "detailsButton": "View Details",
-      "wishlistButton": true
-    },
-    {
-      "id": 3,
-      "title": "Top 10 Beaches in the Caribbean",
-      "image": "https://i.ibb.co.com/ChBfPHT/beach-surrounded-by-sea-greenery-sunlight-blue-sky-praslin-seychelles-min-1.jpg",
-      "shortDescription": "Plan your tropical getaway with our guide to the Caribbean's best beaches.",
-      "category": "Beach",
-      "detailsButton": "https://example.com/blog/caribbean-beaches",
-      "wishlistButton": false
-    },
-    {
-      "id": 4,
-      "title": "Hiking in the Swiss Alps",
-      "image": "https://i.ibb.co.com/S7Ww3HB/man-with-tourist-rucksack-stands-before-gorgeous-view-norway-mountains-min.jpg",
-      "shortDescription": "A guide to hiking trails and breathtaking views in the Swiss Alps.",
-      "category": "Adventure",
-      "detailsButton": "https://example.com/blog/swiss-alps",
-      "wishlistButton": true
-    },
-    {
-      "id": 5,
-      "title": "Japan’s Cherry Blossom Season: What You Need to Know",
-      "image": "https://i.ibb.co.com/2dpZgPF/blooming-almond-tree-with-pink-flowers-near-path-park-min.jpg",
-      "shortDescription": "Learn about the best times and places to view cherry blossoms in Japan.",
-      "category": "Nature",
-      "detailsButton": "https://example.com/blog/japan-cherry-blossoms",
-      "wishlistButton": false
-    },
-    {
-      "id": 6,
-      "title": "Exploring the Streets of Paris",
-      "image": "https://i.ibb.co.com/800qy45/arc-de-triomphe-street-view-paris-min.jpg",
-      "shortDescription": "Discover Paris beyond the Eiffel Tower, from quaint cafes to hidden spots.",
-      "category": "Culture",
-      "detailsButton": "https://example.com/blog/paris-streets",
-      "wishlistButton": true
-    }
-  ]
+  {
+    "title": "Exploring the Hidden Gems of Bali",
+    "image": "https://i.ibb.co.com/Y33bwnz/tree-house-diamond-beach-nusa-penida-island-bali-indonesia-min.jpg",
+    "shortDescription": "Discover the less-traveled paths and serene landscapes of Bali.",
+    "longDescription": "Bali is known for its iconic beaches and lively atmosphere, but hidden beyond the tourist hotspots are serene landscapes and untouched natural wonders. From the unique tree houses overlooking Diamond Beach to the tranquil waterfalls in Munduk, there's much to explore. Experience the authentic Balinese culture, savor traditional cuisine, and immerse yourself in the island's spiritual essence. Venture off the beaten path to discover a side of Bali that's rarely seen.",
+    "category": "Adventure",
+    "detailsButton": "https://example.com/blog/bali-hidden-gems",
+    "wishlistButton": true
+  },
+  {
+    "title": "Ancient Wonders of Egypt",
+    "image": "https://i.ibb.co.com/jgphVtN/young-man-walking-towards-great-sphinx-giza-min.jpg",
+    "shortDescription": "Dive into the history and mystery of ancient Egypt with a visit to its iconic sites.",
+    "longDescription": "Egypt's ancient history is unparalleled, offering travelers the chance to witness iconic landmarks like the Great Pyramids of Giza and the majestic Sphinx. Explore the tombs of the pharaohs in the Valley of the Kings and learn about the captivating mythology that shaped Egyptian civilization. Visit the sprawling Karnak Temple, sail along the Nile River, and uncover the mysteries of one of the world's oldest civilizations.",
+    "category": "History",
+    "detailsButton": "View Details",
+    "wishlistButton": true
+  },
+  {
+    "title": "Top 10 Beaches in the Caribbean",
+    "image": "https://i.ibb.co.com/ChBfPHT/beach-surrounded-by-sea-greenery-sunlight-blue-sky-praslin-seychelles-min-1.jpg",
+    "shortDescription": "Plan your tropical getaway with our guide to the Caribbean's best beaches.",
+    "longDescription": "The Caribbean is a tropical paradise, offering some of the world's most stunning beaches. From the powdery sands of Grace Bay in Turks and Caicos to the crystal-clear waters of Seven Mile Beach in Jamaica, there's something for every beach lover. Enjoy water sports, indulge in fresh seafood, and relax under swaying palm trees. Our guide takes you through the top 10 beaches, ensuring your trip is unforgettable.",
+    "category": "Beach",
+    "detailsButton": "https://example.com/blog/caribbean-beaches",
+    "wishlistButton": false
+  },
+  {
+    "title": "Hiking in the Swiss Alps",
+    "image": "https://i.ibb.co.com/S7Ww3HB/man-with-tourist-rucksack-stands-before-gorgeous-view-norway-mountains-min.jpg",
+    "shortDescription": "A guide to hiking trails and breathtaking views in the Swiss Alps.",
+    "longDescription": "The Swiss Alps offer some of the most breathtaking hiking trails in the world. Whether you're a seasoned hiker or a beginner, there's a trail for you. Traverse through lush meadows, picturesque villages, and snow-capped peaks. Popular trails include the Eiger Trail, the Haute Route, and the Matterhorn Glacier Trail. Along the way, enjoy cozy mountain huts, stunning vistas, and the serenity of alpine nature.",
+    "category": "Adventure",
+    "detailsButton": "https://example.com/blog/swiss-alps",
+    "wishlistButton": true
+  },
+  {
+    "title": "Japan’s Cherry Blossom Season: What You Need to Know",
+    "image": "https://i.ibb.co.com/2dpZgPF/blooming-almond-tree-with-pink-flowers-near-path-park-min.jpg",
+    "shortDescription": "Learn about the best times and places to view cherry blossoms in Japan.",
+    "longDescription": "Cherry blossom season, or sakura, is one of Japan's most celebrated times of the year. From late March to early April, the country is transformed into a pink wonderland. Visit Tokyo's Ueno Park or Kyoto's Philosopher's Path for a magical experience. Learn about hanami, the tradition of flower viewing, and explore the cultural significance of these fleeting blooms. Our guide helps you plan your visit to make the most of this enchanting season.",
+    "category": "Nature",
+    "detailsButton": "https://example.com/blog/japan-cherry-blossoms",
+    "wishlistButton": false
+  },
+  {
+    "title": "Exploring the Streets of Paris",
+    "image": "https://i.ibb.co.com/800qy45/arc-de-triomphe-street-view-paris-min.jpg",
+    "shortDescription": "Discover Paris beyond the Eiffel Tower, from quaint cafes to hidden spots.",
+    "longDescription": "Paris is more than its famous landmarks; it's a city of hidden gems and cultural treasures. Wander through the cobblestone streets of Montmartre, discover art at the Musée de l'Orangerie, or sip coffee at a quiet café in Le Marais. Explore the vibrant neighborhoods, sample authentic French cuisine, and soak in the romantic ambiance of the City of Light. Our guide unveils a side of Paris that tourists often miss.",
+    "category": "Culture",
+    "detailsButton": "https://example.com/blog/paris-streets",
+    "wishlistButton": true
+  }
+]

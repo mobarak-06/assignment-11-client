@@ -20,7 +20,7 @@ const NewsLetter = () => {
       <form onSubmit={handleNewsLetter}>
         <div className="flex mt-4">
           <input
-            type="text"
+            type="email"
             name="newsLetter"
             placeholder="Enter Your Email Address"
             className="input input-bordered w-full max-w-xs"
