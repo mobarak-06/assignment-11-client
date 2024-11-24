@@ -7,7 +7,6 @@ const DetailsOfBlog = () => {
   const [comments, setComments] = useState([]);
   const { user } = useAuth();
   const blog = useLoaderData();
-  console.log(blog);
   const { _id, title, image, shortDescription, longDescription, category } =
     blog;
 
@@ -15,7 +14,6 @@ const DetailsOfBlog = () => {
     e.preventDefault();
     const from = e.target;
     const comment = from.comment.value;
-    console.log(comment);
     from.reset();
 
     const addComments = {
@@ -44,7 +42,7 @@ const DetailsOfBlog = () => {
       .then((data) => setComments(data));
   }, [_id, comments]);
 
-  console.log(comments);
+
 
   return (
     <div>
@@ -77,7 +75,7 @@ const DetailsOfBlog = () => {
       </div>
       {/* update blog */}
       <div>
-        <Link to="/update" className="text-xl font-semibold p-2 bg-green-500 hover:bg-green-600 text-white mx-24 rounded-lg mb-6 btn">
+        <Link to={`/update/${_id}`} className="text-xl font-semibold p-2 bg-green-500 hover:bg-green-600 text-white mx-24 rounded-lg mb-6 btn">
           Update Blog
         </Link>
       </div>

@@ -9,6 +9,7 @@ import Register from "../pages/Register";
 import Wishlist from "../pages/Wishlist";
 import ErrorPage from "../pages/ErrorPage";
 import DetailsOfBlog from "../pages/DetailsOfBlog";
+import Update from "../pages/Update";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path: "/blogDetails/:id",
         element: <DetailsOfBlog />,
+        loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
+      },
+      {
+        path: "/update/:id",
+        element: <Update/>,
         loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
       },
     ],
