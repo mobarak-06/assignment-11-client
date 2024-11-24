@@ -10,15 +10,14 @@ const Update = () => {
   const blog = useLoaderData();
   const { _id, title, image, shortDescription, longDescription, category } =
   blog;
-  console.log(blog);
+
 
   const onSubmit = (data) => {
     const { title, shortDescription, longDescription, category, photo } = data;
-    console.log(data);
     const name = user?.displayName || {};
     const email = user?.email || {};
 
-    const newUser = {
+    const updatedUser = {
       name,
       email,
       title,
@@ -27,20 +26,19 @@ const Update = () => {
       category,
       photo,
     };
-    console.log(newUser);
 
-    fetch("http://localhost:5000/update", {
-      method: "POST",
+    fetch(`http://localhost:5000/update/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newUser),
+      body: JSON.stringify(updatedUser),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
-          toast.success("Blog Added SuccessFully !");
+        if (data.modifiedCount) {
+          toast.success("Blog Updated SuccessFully !");
         }
       });
   };

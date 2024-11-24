@@ -7,8 +7,15 @@ const DetailsOfBlog = () => {
   const [comments, setComments] = useState([]);
   const { user } = useAuth();
   const blog = useLoaderData();
-  const { _id, title, image, shortDescription, longDescription, category } =
-    blog;
+  const {
+    _id,
+    title,
+    image,
+    shortDescription,
+    longDescription,
+    category,
+    email,
+  } = blog;
 
   const handleComments = (e) => {
     e.preventDefault();
@@ -42,8 +49,6 @@ const DetailsOfBlog = () => {
       .then((data) => setComments(data));
   }, [_id, comments]);
 
-
-
   return (
     <div>
       <div className="bg-gray-500 rounded-sm shadow-xl px-24">
@@ -74,11 +79,19 @@ const DetailsOfBlog = () => {
         </div>
       </div>
       {/* update blog */}
-      <div>
-        <Link to={`/update/${_id}`} className="text-xl font-semibold p-2 bg-green-500 hover:bg-green-600 text-white mx-24 rounded-lg mb-6 btn">
-          Update Blog
-        </Link>
-      </div>
+      {user?.email === email ? (
+        <div>
+          <Link
+            to={`/update/${_id}`}
+            className="text-xl font-semibold p-2 bg-green-500 hover:bg-green-600 text-white mx-24 rounded-lg mb-6 btn"
+          >
+            Update Blog
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
+
       <div className="mt-4 mx-24">
         <form onSubmit={handleComments}>
           <div className="flex">
