@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
 import useAuth from "../Hooks/useAuth";
+import Navbar from "../components/Navbar";
 
 const Login = () => {
   const [showEye, setShowEye] = useState(false);
@@ -57,7 +58,11 @@ const Login = () => {
       });
   };
   return (
-    <main className="mx-auto flex min-h-screen w-full items-center justify-center dark:bg-gray-900 text-black">
+    <div>
+      <div className="bg-gray-500 rounded-sm shadow-xl px-24">
+        <Navbar/>
+      </div>
+      <main className="mx-auto flex min-h-screen w-full items-center justify-center dark:bg-gray-900 text-black">
       <section className="flex w-[30rem] flex-col space-y-10">
         <div className="text-center text-4xl font-medium text-gray-400">
           Log In
@@ -148,6 +153,7 @@ const Login = () => {
         </div>
       </section>
     </main>
+    </div>
   );
 };
 

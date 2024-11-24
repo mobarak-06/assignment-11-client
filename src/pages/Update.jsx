@@ -1,4 +1,6 @@
-const blogDetails = () => {
+
+
+const Update = () => {
     return (
         <div>
             
@@ -6,4 +8,4 @@ const blogDetails = () => {
     );
 };
 
-export default blogDetails;
+export default Update;

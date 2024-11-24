@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import Navbar from "../components/Navbar";
 import useAuth from "../Hooks/useAuth";
+import toast from "react-hot-toast";
 // import toast from "react-hot-toast";
 
 const AddBlog = () => {
@@ -24,20 +25,20 @@ const AddBlog = () => {
     };
     console.log(newUser);
 
-    // fetch("https://assignment-10-server-gamma-nine.vercel.app/addCraftItem", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(newUser),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       toast.success("Item Added SuccessFully !");
-    //     }
-    //   });
+    fetch("http://localhost:5000/addBlogs", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast.success("Blog Added SuccessFully !");
+        }
+      });
   };
   return (
     <div>
@@ -100,8 +101,11 @@ const AddBlog = () => {
                   <option disabled selected>
                     category
                   </option>
-                  <option>Yes</option>
-                  <option>No</option>
+                  <option>Asia</option>
+                  <option>Europe</option>
+                  <option>Africa</option>
+                  <option>North America</option>
+                  <option>South America</option>
                 </select>
               </div>
             </div>

@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const SingleBlog = ({ recentBlog }) => {
-  const { title, image, shortDescription, category } = recentBlog;
+  const { _id, title, image, shortDescription, category } = recentBlog;
   return (
     <div>
       <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
@@ -16,7 +18,7 @@ const SingleBlog = ({ recentBlog }) => {
             {shortDescription}
           </p>
           <div className="flex justify-between">
-            <button className="btn bg-[#50B1C9] text-white">Details</button>
+            <Link to={`/blogDetails/${_id}`} className="btn bg-[#50B1C9] text-white">Details</Link>
             <button className="btn bg-[#23BE0A] text-white">Wishlist</button>
           </div>
         </div>
