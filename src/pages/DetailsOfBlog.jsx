@@ -35,7 +35,7 @@ const DetailsOfBlog = () => {
       comment,
     };
 
-    fetch(`http://localhost:5000/addComments`, {
+    fetch(`${import.meta.env.VITE_URL}/addComments`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -49,7 +49,7 @@ const DetailsOfBlog = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/addComments/${_id}`)
+    fetch(`${import.meta.env.VITE_URL}/addComments/${_id}`)
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, [_id, comments]);

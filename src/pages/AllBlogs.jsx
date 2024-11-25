@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import RecentBlogs from "../components/RecentBlogs";
 import SingleBlog from "../components/SingleBlog";
 
 const AllBlogs = () => {

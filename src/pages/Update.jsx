@@ -27,7 +27,7 @@ const Update = () => {
       photo,
     };
 
-    fetch(`http://localhost:5000/update/${_id}`, {
+    fetch(`${import.meta.env.VITE_URL}/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

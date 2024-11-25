@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import Navbar from "../components/Navbar";
 import useAuth from "../Hooks/useAuth";
 import toast from "react-hot-toast";
-// import toast from "react-hot-toast";
 
 const AddBlog = () => {
   const { user } = useAuth();
@@ -25,7 +24,7 @@ const AddBlog = () => {
     };
     console.log(newUser);
 
-    fetch("http://localhost:5000/addBlogs", {
+    fetch(`${import.meta.env.VITE_URL}/addBlogs`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

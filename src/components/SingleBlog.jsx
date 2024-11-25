@@ -19,7 +19,7 @@ const SingleBlog = ({ recentBlog }) => {
     };
     console.log(wishlistItem);
 
-    fetch("http://localhost:5000/addWishlist", {
+    fetch(`${import.meta.env.VITE_URL}/addWishlist`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

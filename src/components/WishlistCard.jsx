@@ -8,13 +8,13 @@ const WishlistCard = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
   const [controls, setControls] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/addWishlist/${user?.email}`)
+    fetch(`${import.meta.env.VITE_URL}/addWishlist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setWishlistItems(data));
   }, [user, controls]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`${import.meta.env.VITE_URL}/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         path: "/blogDetails/:id",
         element: <DetailsOfBlog />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blogs/${params.id}`),
+          fetch(`${import.meta.env.VITE_URL}/blogs/${params.id}`),
       },
       {
         path: "/update/:id",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/blogs/${params.id}`),
+          fetch(`${import.meta.env.VITE_URL}/blogs/${params.id}`),
       },
     ],
   },
