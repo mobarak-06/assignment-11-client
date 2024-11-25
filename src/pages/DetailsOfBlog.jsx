@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import useAuth from "../Hooks/useAuth";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const DetailsOfBlog = () => {
   const [comments, setComments] = useState([]);
@@ -22,6 +23,10 @@ const DetailsOfBlog = () => {
     const from = e.target;
     const comment = from.comment.value;
     from.reset();
+
+    if (user.email === email) {
+      return toast.error("Can not comment on own blog")
+    }
 
     const addComments = {
       id: _id,

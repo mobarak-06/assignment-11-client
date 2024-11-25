@@ -9,7 +9,7 @@ const AddBlog = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    const { title, shortDescription, longDescription, category, photo } = data;
+    const { title, shortDescription, longDescription, category, image } = data;
     console.log(data);
     reset();
     const name = user?.displayName || {};
@@ -21,7 +21,7 @@ const AddBlog = () => {
       longDescription,
       shortDescription,
       category,
-      photo,
+      image,
     };
     console.log(newUser);
 
@@ -85,7 +85,7 @@ const AddBlog = () => {
                 <input
                   type="text"
                   placeholder="Photo Url"
-                  {...register("photo")}
+                  {...register("image")}
                   className="input input-bordered w-full"
                   required
                 />

@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import WishlistCard from "../components/WishlistCard";
 
 const Wishlist = () => {
   return (
@@ -8,6 +9,9 @@ const Wishlist = () => {
         <p className="text-5xl font-bold text-white text-center mt-10 ">
           Wishlist
         </p>
+      </div>
+      <div>
+        <WishlistCard/>
       </div>
     </div>
   );
