@@ -6,14 +6,14 @@ import toast from "react-hot-toast";
 
 const AddBlog = () => {
   const { user } = useAuth();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     const { title, shortDescription, longDescription, category, photo } = data;
     console.log(data);
+    reset();
     const name = user?.displayName || {};
     const email = user?.email || {};
-
     const newUser = {
       name,
       email,

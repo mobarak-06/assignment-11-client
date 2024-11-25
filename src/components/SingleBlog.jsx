@@ -19,7 +19,7 @@ const SingleBlog = ({ recentBlog }) => {
           </p>
           <div className="flex justify-between">
             <Link to={`/blogDetails/${_id}`} className="btn bg-[#50B1C9] text-white">Details</Link>
-            <button className="btn bg-[#23BE0A] text-white">Wishlist</button>
+            <Link to="/wishlist" className="btn bg-[#23BE0A] text-white">Wishlist</Link>
           </div>
         </div>
       </div>
